@@ -35,7 +35,7 @@ uint8_t Com::selectedLanguage;
 #endif
 #endif
 #ifndef FIRMWARE_URL
-#define FIRMWARE_URL "https://github.com/repetier/Repetier-Firmware/"
+#define FIRMWARE_URL "git.io/vAdh1" // points to this repo & shortened
 #endif // FIRMWARE_URL
 
 FSTRINGVALUE(Com::tFirmware, "FIRMWARE_NAME:Repetier_" REPETIER_VERSION " COMPILED:" __DATE__ " FIRMWARE_URL:" FIRMWARE_URL " PROTOCOL_VERSION:1.0 MACHINE_TYPE:" MACHINE_TYPE " EXTRUDER_COUNT:" XSTR(NUM_EXTRUDER) " REPETIER_PROTOCOL:3")
