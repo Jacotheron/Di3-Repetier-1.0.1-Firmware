@@ -201,10 +201,13 @@
 #define UI_ACTION_SELECT_EXTRUDER3      1131
 #define UI_ACTION_SELECT_EXTRUDER4      1132
 #define UI_ACTION_SELECT_EXTRUDER5      1133
+
+#if FEATURE_DITTO_PRINTING
 #define UI_DITTO_0                      1134
 #define UI_DITTO_1                      1135
 #define UI_DITTO_2                      1136
 #define UI_DITTO_3                      1137
+#endif
 
 #define UI_ACTION_DEBUG_ECHO            1150
 #define UI_ACTION_DEBUG_INFO            1151
@@ -234,12 +237,16 @@
 #define UI_ACTION_STOP_CONFIRMED        1222
 #define UI_ACTION_FAN2SPEED             1223
 #define UI_ACTION_AUTOLEVEL             1224
+#if DISTORTION_CORRECTION
 #define UI_ACTION_MEASURE_DISTORTION    1225
 #define UI_ACTION_TOGGLE_DISTORTION     1226
+#endif
 #define UI_ACTION_MESSAGE               1227
 #define UI_ACTION_STATE                 1228
 #define UI_ACTION_AUTOLEVEL2            1229
+#if DISTORTION_CORRECTION
 #define UI_ACTION_MEASURE_DISTORTION2   1230
+#endif
 #define UI_ACTION_BED_PREHEAT           1231
 #define UI_ACTION_EXT0_PREHEAT          1232
 #define UI_ACTION_EXT1_PREHEAT          1233
