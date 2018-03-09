@@ -122,16 +122,14 @@
 #define UI_TEXT_EXTRUDER_ID 15 //         "Extruder"
 #define UI_TEXT_SD_CARD_ID 16 //          "SD Card"
 #define UI_TEXT_DEBUGGING_ID 17 //        "Debugging"
-// #define UI_TEXT_HOME_DELTA_ID 18 //       "Home Delta"
+#define UI_TEXT_HOME_DELTA_ID 18 //       "Home Delta"
 #define UI_TEXT_HOME_ALL_ID 19 //         "Home All"
 #define UI_TEXT_HOME_X_ID 20 //           "Home X"
 #define UI_TEXT_HOME_Y_ID 21 //           "Home Y"
 #define UI_TEXT_HOME_Z_ID 22 //           "Home Z"
 #define UI_TEXT_PREHEAT_SINGLE_ID 23 //      "Preheat PLA"
 #define UI_TEXT_PREHEAT_ALL_ID 24 //      "Preheat All"
-#if CASE_LIGHTS_PIN > -1
 #define UI_TEXT_LIGHTS_ONOFF_ID 25 //     "Lights :%lo"
-#endif
 #define UI_TEXT_COOLDOWN_ID 26 //         "Cooldown"
 #define UI_TEXT_SET_TO_ORIGIN_ID 27 //    "Set to Origin"
 #define UI_TEXT_DISABLE_STEPPER_ID 28 //  "Disable stepper"
@@ -156,11 +154,11 @@
 #define UI_TEXT_PRINT_X_ID 47 //          "Print X:%ax"
 #define UI_TEXT_PRINT_Y_ID 48 //          "Print Y:%ay"
 #define UI_TEXT_PRINT_Z_ID 49 //          "Print Z:%az"
-// #define UI_TEXT_PRINT_Z_DELTA_ID 50 //    "Print:%az"
+#define UI_TEXT_PRINT_Z_DELTA_ID 50 //    "Print:%az"
 #define UI_TEXT_MOVE_X_ID 51 //           "Move X :%aX"
 #define UI_TEXT_MOVE_Y_ID 52 //           "Move Y :%aY"
 #define UI_TEXT_MOVE_Z_ID 53 //           "Move Z :%aZ"
-// #define UI_TEXT_MOVE_Z_DELTA_ID 54 //     "Move:%aZ"
+#define UI_TEXT_MOVE_Z_DELTA_ID 54 //     "Move:%aZ"
 #define UI_TEXT_JERK_ID 55 //             "Jerk   :%aj"
 #define UI_TEXT_ZJERK_ID 56 //            "Z-Jerk :%aJ"
 #define UI_TEXT_ACCELERATION_ID 57 //     "Acceleration"
@@ -188,11 +186,11 @@
 #define UI_TEXT_FEED_MAX_X_ID 79 //       "Max X:%fx"
 #define UI_TEXT_FEED_MAX_Y_ID 80 //       "Max Y:%fy"
 #define UI_TEXT_FEED_MAX_Z_ID 81 //       "Max Z:%fz"
-// #define UI_TEXT_FEED_MAX_Z_DELTA_ID 82 // "Max:%fz"
+#define UI_TEXT_FEED_MAX_Z_DELTA_ID 82 // "Max:%fz"
 #define UI_TEXT_FEED_HOME_X_ID 83 //      "Home X:%fX"
 #define UI_TEXT_FEED_HOME_Y_ID 84 //      "Home Y:%fY"
 #define UI_TEXT_FEED_HOME_Z_ID 85 //      "Home Z:%fZ"
-// #define UI_TEXT_FEED_HOME_Z_DELTA_ID 86 // "Home:%fZ"
+#define UI_TEXT_FEED_HOME_Z_DELTA_ID 86 // "Home:%fZ"
 #define UI_TEXT_ACTION_XPOSITION4A_ID 87 // "X:%x0 mm"
 #define UI_TEXT_ACTION_XPOSITION4B_ID 88 // "Min endstop:%sx"
 #define UI_TEXT_ACTION_XPOSITION4C_ID 89 // "Max endstop:%sX"
@@ -251,12 +249,8 @@
 #define UI_TEXT_EXTR_MAX_FEED_ID 142 //     "Max FR:%XF"
 #define UI_TEXT_EXTR_ACCEL_ID 143 //        "Accel:%XA"
 #define UI_TEXT_EXTR_WATCH_ID 144 //        "Stab.Time:%Xw"
-#if USE_ADVANCE == 1
 #define UI_TEXT_EXTR_ADVANCE_L_ID 145 //    "Advance lin:%Xl"
-#endif
-#if ENABLE_QUADRATIC_ADVANCE == 1
 #define UI_TEXT_EXTR_ADVANCE_K_ID 146 //    "Advance quad:%Xa"
-#endif
 #define UI_TEXT_EXTR_MANAGER_ID 147 //      "Control:%Xh"
 #define UI_TEXT_EXTR_PGAIN_ID 148 //        "PID P:%Xp"
 #define UI_TEXT_EXTR_DEADTIME_ID 149 //     "Deadtime:%Xp"
@@ -296,7 +290,7 @@
 #define UI_TEXT_SET_P2_ID 183 //            "Set P2"
 #define UI_TEXT_SET_P3_ID 184 //            "Set P3"
 #define UI_TEXT_CALCULATE_LEVELING_ID 185 // "Calculate Leveling"
-// #define UI_TEXT_LEVEL_ID 186 //             "Level delta"
+#define UI_TEXT_LEVEL_ID 186 //             "Level delta"
 #define UI_TEXT_EXTR_WAIT_RETRACT_TEMP_ID 187 // "Wait Temp. %XT" cDEG "C"
 #define UI_TEXT_EXTR_WAIT_RETRACT_UNITS_ID 188 // "Wait Units: %XU mm"
 #define UI_TEXT_SD_REMOVED_ID 189 //       "SD Card removed"
@@ -320,26 +314,15 @@
 #define UI_TEXT_WIZ_CH_FILAMENT2_ID 205 // "Rotate to move"
 #define UI_TEXT_WIZ_CH_FILAMENT3_ID 206 // "filament up/down"
 #define UI_TEXT_CLICK_DONE_ID 207 // "Click when done"
-#if FEATURE_AUTOLEVEL == 1
-#define UI_TEXT_AUTOLEVEL_BED_ID 287 // "Autolevel bed"
 #define UI_TEXT_AUTOLEVEL_ONOFF_ID 208 //  "Autolevel: %ll"
-#define UI_TEXT_CLEARBED1_ID 276 // "Make sure the heated"
-#define UI_TEXT_CLEARBED2_ID 277 // "bed is clear of any"
-#define UI_TEXT_CLEARBED3_ID 278 // "obstructions"
-#endif
-#if FEATURE_SERVO > 0 && UI_SERVO_CONTROL > 0
 #define UI_TEXT_SERVOPOS_ID 209 // "Servo pos.: %oS"
-#endif
 #define UI_TEXT_IGNORE_M106_ID 210 //      "Ignore M106 cmd %Fi"
 #define UI_TEXT_WIZ_REHEAT1_ID 211 // "Click to reheat"
 #define UI_TEXT_WIZ_REHEAT2_ID 212 // "extruders."
 #define UI_TEXT_WIZ_WAITTEMP1_ID 213 // "Wait for target"
 #define UI_TEXT_WIZ_WAITTEMP2_ID 214 // "temperatures ..."
-#if EXTRUDER_JAM_CONTROL == 1
 #define UI_TEXT_EXTRUDER_JAM_ID 215 // "Extruder Jam"
-#endif
 #define UI_TEXT_STANDBY_ID 216 // "Standby"
- #if UI_BED_COATING == 1
 #define UI_TEXT_BED_COATING_ID 217 // "Bed Coating"
 #define UI_TEXT_BED_COATING_SET1_ID 218 // "Bed coating set to",""
 #define UI_TEXT_BED_COATING_SET2_ID 219 // "Bed coating set to",""
@@ -351,8 +334,6 @@
 #define UI_TEXT_GLUESTICK_ID 225 // "Glue Stick"
 #define UI_TEXT_CUSTOM_ID 226 // "Custom"
 #define UI_TEXT_COATING_CUSTOM_ID 227 // "Custom : %oCmm"
-#define UI_TEXT_COATING_THICKNESS_ID 247 //" %oCmm"
-#endif
 #define UI_TEXT_LANGUAGE_ID 228 // "Language"
 #define UI_TEXT_MAINPAGE6_1_ID 229 //"\xa %e0/%E0\xb0 X:%x0"
 #define UI_TEXT_MAINPAGE6_2_ID 230 //"\xa %e1/%E1\xb0 Y:%x1"
@@ -372,7 +353,7 @@
 #define UI_TEXT_EMPTY_ID 244 //""
 #define UI_TEXT_TEMP_SET_ID 245 //cTEMP "%ec/%Ec" cDEG
 #define UI_TEXT_CURRENT_TEMP_ID 246 //cTEMP "%ec" cDEG
-#if NUM_EXTRUDER > 2
+#define UI_TEXT_COATING_THICKNESS_ID 247 //" %oCmm"
 #define UI_TEXT_EXTR3_TEMP_ID 248 //       "Temp. 4 : %E3" cDEG "C"
 #define UI_TEXT_EXTR4_TEMP_ID 249 //       "Temp. 5 : %E4" cDEG "C"
 #define UI_TEXT_EXTR5_TEMP_ID 250 //       "Temp. 6 : %E5" cDEG "C"
@@ -382,14 +363,11 @@
 #define UI_TEXT_EXTR3_SELECT_ID 254
 #define UI_TEXT_EXTR4_SELECT_ID 255
 #define UI_TEXT_EXTR5_SELECT_ID 256
-#endif
-#if FEATURE_DITTO_PRINTING
 #define UI_TEXT_DITTO_0_ID 257
 #define UI_TEXT_DITTO_1_ID 258
 #define UI_TEXT_DITTO_2_ID 259
 #define UI_TEXT_DITTO_3_ID 260
-#endif
-
+#define UI_TEXT_ZPROBE_HEIGHT_ID 261
 #define UI_TEXT_OFFSETS_ID 262
 #define UI_TEXT_X_OFFSET_ID 263
 #define UI_TEXT_Y_OFFSET_ID 264
@@ -398,14 +376,16 @@
 #define UI_TEXT_LAYER_ID 267
 #define UI_TEXT_PROGRESS_ID 268
 #define UI_TEXT_PRINTNAME_ID 269
+
 #define UI_TEXT_SETUP_ID 270 //"Setup"
-#if DISTORTION_CORRECTION
 #define UI_TEXT_MEASURE_DISTORTION_ID 271 // "Measure distortion"
 #define UI_TEXT_DISTORTION_CORR_ID 272 // "Distortion corr.:%De"
-#endif
 #define UI_TEXT_ACTION_FAN2SPEED_ID 273 //   "Fan 2 speed:%FS%%%"
 #define UI_TEXT_CANCEL_ID 274 // "Cancel"
 #define UI_TEXT_PLEASE_WAIT_ID 275 // "*** Please wait ***"
+#define UI_TEXT_CLEARBED1_ID 276 // "Make sure the heated"
+#define UI_TEXT_CLEARBED2_ID 277 // "bed is clear of any"
+#define UI_TEXT_CLEARBED3_ID 278 // "obstructions"
 #define UI_TEXT_NOTIFICATION_ID 279 // "Notification:"
 #define UI_TEXT_TEMPSENSOR_DEFECT_ID 280 // "Temp. sensor defect"
 #define UI_TEXT_HEATER_DECOUPLED_ID 281 // "Heater decoupled"
@@ -414,36 +394,30 @@
 #define UI_TEXT_OK_ID 284 // "Ok"
 #define UI_TEXT_CALIBRATING_ID 285 // "Calibrating bed"
 #define UI_TEXT_CALIBRATION_ERROR_ID 286 // "Calibration Error"
+#define UI_TEXT_AUTOLEVEL_BED_ID 287 // "Autolevel bed"
 #define UI_TEXT_HOMING_ID 288 // "Homing..."
 #define UI_TEXT_PREHEAT_TEMPS_ID 289 // "Preheat Temperatures"
 #define UI_TEXT_PREHEAT_E0_ID 290 // "Extr. 1: %p0" cDEG "C"
 #define UI_TEXT_PREHEAT_E1_ID 291 // "Extr. 2: %p1" cDEG "C"
-#if NUM_EXTRUDER > 2
 #define UI_TEXT_PREHEAT_E2_ID 292 // "Extr. 3: %p2" cDEG "C"
 #define UI_TEXT_PREHEAT_E3_ID 293 // "Extr. 4: %p3" cDEG "C"
 #define UI_TEXT_PREHEAT_E4_ID 294 // "Extr. 5: %p4" cDEG "C"
 #define UI_TEXT_PREHEAT_E5_ID 295 // "Extr. 6: %p5" cDEG "C"
-#endif
 #define UI_TEXT_PREHEAT_BED_ID 296 // "Bed    : %pb" cDEG "C"
+#define UI_TEXT_MEAS_ZP_HEIGHT_ID 297 // "Meas. Probe Height"
 #define UI_TEXT_CUR_TEMP_ID 298 // "Temp. %ec/%Ec" cDEG "C"
+#define UI_TEXT_REAL_Z_ID 299 // "Real Z Pos:%W0mm"
 #define UI_TEXT_CONTINUE_ID 300 // "Continue"
 #define UI_TEXT_CLOSE_ID 301 // "Close"
 #define UI_TEXT_EXTR_ZOFF_ID 302 //         "Z-Offset:%Xz"
 #define UI_TEXT_MEASURING_ID 303 // "Measuring ..."
-#if FEATURE_Z_PROBE
-#define UI_TEXT_REAL_Z_ID 299 // "Real Z Pos:%W0mm"
-#define UI_TEXT_MEAS_ZP_HEIGHT_ID 297 // "Meas. Probe Height"
 #define UI_TEXT_Z_PROBE_ID 304
-#define UI_TEXT_ZPROBE_HEIGHT_ID 261
-#endif
 #define UI_TEXT_MAINPAGE6_1_C_ID 305 //"\xa %e0/%E0\xb0 X:%x0"
 #define UI_TEXT_MAINPAGE6_2_C_ID 306 //"\xa %e1/%E1\xb0 Y:%x1"
 #define UI_TEXT_MAINPAGE6_3_C_ID 307 //"\xe %eb/%Eb\xb0 Z:%x2"
 #define UI_TEXT_MAINPAGE6_4_C_ID 308 //""Mul: %om%%% Laser %op W"
 #define UI_TEXT_MAINPAGE6_4_L_ID 309 //""Mul: %om%%% Spindle %opRPM"
-#if EXTRUDER_JAM_CONTROL == 1
 #define UI_TEXT_JAMCONTROL_ID 310 // "%ej Jam Control
-#endif
 // Universal definitions
 
 #define UI_TEXT_SEL              cSEL
@@ -472,16 +446,14 @@
 #define UI_TEXT_EXTRUDER_EN         "Extruder"
 #define UI_TEXT_SD_CARD_EN          "SD card"
 #define UI_TEXT_DEBUGGING_EN        "Debugging"
-// #define UI_TEXT_HOME_DELTA_EN       "Home delta"
+#define UI_TEXT_HOME_DELTA_EN       "Home delta"
 #define UI_TEXT_HOME_ALL_EN         "Home all"
 #define UI_TEXT_HOME_X_EN           "Home X"
 #define UI_TEXT_HOME_Y_EN           "Home Y"
 #define UI_TEXT_HOME_Z_EN           "Home Z"
 #define UI_TEXT_PREHEAT_SINGLE_EN      "Preheat Single Extr."
 #define UI_TEXT_PREHEAT_ALL_EN      "Preheat All Extr."
-#if CASE_LIGHTS_PIN > -1
 #define UI_TEXT_LIGHTS_ONOFF_EN     "Lights:%lo"
-#endif
 #define UI_TEXT_COOLDOWN_EN         "Cooldown"
 #define UI_TEXT_SET_TO_ORIGIN_EN    "Set to origin"
 #define UI_TEXT_DISABLE_STEPPER_EN  "Disable stepper"
@@ -506,11 +478,11 @@
 #define UI_TEXT_PRINT_X_EN          "Print X:%ax"
 #define UI_TEXT_PRINT_Y_EN          "Print Y:%ay"
 #define UI_TEXT_PRINT_Z_EN          "Print Z:%az"
-// #define UI_TEXT_PRINT_Z_DELTA_EN    "Print:%az"
+#define UI_TEXT_PRINT_Z_DELTA_EN    "Print:%az"
 #define UI_TEXT_MOVE_X_EN           "Move X :%aX"
 #define UI_TEXT_MOVE_Y_EN           "Move Y :%aY"
 #define UI_TEXT_MOVE_Z_EN           "Move Z :%aZ"
-// #define UI_TEXT_MOVE_Z_DELTA_EN     "Move:%aZ"
+#define UI_TEXT_MOVE_Z_DELTA_EN     "Move:%aZ"
 #define UI_TEXT_JERK_EN             "Jerk   :%aj"
 #define UI_TEXT_ZJERK_EN            "Z-Jerk :%aJ"
 #define UI_TEXT_ACCELERATION_EN     "Acceleration"
@@ -539,11 +511,11 @@
 #define UI_TEXT_FEED_MAX_X_EN       "Max X:%fx"
 #define UI_TEXT_FEED_MAX_Y_EN       "Max Y:%fy"
 #define UI_TEXT_FEED_MAX_Z_EN       "Max Z:%fz"
-// #define UI_TEXT_FEED_MAX_Z_DELTA_EN "Max:%fz"
+#define UI_TEXT_FEED_MAX_Z_DELTA_EN "Max:%fz"
 #define UI_TEXT_FEED_HOME_X_EN      "Home X:%fX"
 #define UI_TEXT_FEED_HOME_Y_EN      "Home Y:%fY"
 #define UI_TEXT_FEED_HOME_Z_EN      "Home Z:%fZ"
-// #define UI_TEXT_FEED_HOME_Z_DELTA_EN "Home:%fZ"
+#define UI_TEXT_FEED_HOME_Z_DELTA_EN "Home:%fZ"
 #define UI_TEXT_ACTION_XPOSITION4A_EN "X:%x0 mm %dx%dX"
 #define UI_TEXT_ACTION_XPOSITION4B_EN "Min endstop:%sx"
 #define UI_TEXT_ACTION_XPOSITION4C_EN "Max endstop:%sX"
@@ -602,12 +574,8 @@
 #define UI_TEXT_EXTR_MAX_FEED_EN     "Max FR:%XF"
 #define UI_TEXT_EXTR_ACCEL_EN        "Accel:%XA"
 #define UI_TEXT_EXTR_WATCH_EN        "Stab.Time:%Xw"
-#if USE_ADVANCE == 1
 #define UI_TEXT_EXTR_ADVANCE_L_EN    "Advance lin:%Xl"
-#endif
-#if ENABLE_QUADRATIC_ADVANCE == 1
 #define UI_TEXT_EXTR_ADVANCE_K_EN    "Advance quad:%Xa"
-#endif
 #define UI_TEXT_EXTR_MANAGER_EN      "Control:%Xh"
 #define UI_TEXT_EXTR_PGAIN_EN        "PID P:%Xp"
 #define UI_TEXT_EXTR_DEADTIME_EN     "Deadtime:%Xp"
@@ -647,7 +615,7 @@
 #define UI_TEXT_SET_P2_EN            "Set P2"
 #define UI_TEXT_SET_P3_EN            "Set P3"
 #define UI_TEXT_CALCULATE_LEVELING_EN "Calculate leveling"
-// #define UI_TEXT_LEVEL_EN             "Level delta"
+#define UI_TEXT_LEVEL_EN             "Level delta"
 #define UI_TEXT_EXTR_WAIT_RETRACT_TEMP_EN "Wait temp. %XT" cDEG "C"
 #define UI_TEXT_EXTR_WAIT_RETRACT_UNITS_EN "Wait retr.:%XU mm"
 #define UI_TEXT_SD_REMOVED_EN       "SD card removed"
@@ -671,22 +639,15 @@
 #define UI_TEXT_WIZ_CH_FILAMENT2_EN "Rotate to move"
 #define UI_TEXT_WIZ_CH_FILAMENT3_EN "filament up/down"
 #define UI_TEXT_CLICK_DONE_EN "Click when done"
-#if FEATURE_AUTOLEVEL == 1
 #define UI_TEXT_AUTOLEVEL_ONOFF_EN  "Autolevel: %ll"
-#endif
-#if FEATURE_SERVO > 0 && UI_SERVO_CONTROL > 0
 #define UI_TEXT_SERVOPOS_EN "Servo pos.: %oS"
-#endif
 #define UI_TEXT_IGNORE_M106_EN      "Ignore M106 cmd %Fi"
 #define UI_TEXT_WIZ_REHEAT1_EN "Click to reheat"
 #define UI_TEXT_WIZ_REHEAT2_EN "extruders."
 #define UI_TEXT_WIZ_WAITTEMP1_EN "Wait for target"
 #define UI_TEXT_WIZ_WAITTEMP2_EN "temperatures ..."
-#if EXTRUDER_JAM_CONTROL == 1
 #define UI_TEXT_EXTRUDER_JAM_EN "Extruder jam"
-#endif
 #define UI_TEXT_STANDBY_EN "Standby"
- #if UI_BED_COATING == 1
 #define UI_TEXT_BED_COATING_EN "Bed coating"
 #define UI_TEXT_BED_COATING_SET1_EN "Bed coating set to"
 #define UI_TEXT_BED_COATING_SET2_EN ""
@@ -698,8 +659,6 @@
 #define UI_TEXT_GLUESTICK_EN "Glue stick"
 #define UI_TEXT_CUSTOM_EN "Custom"
 #define UI_TEXT_COATING_CUSTOM_EN "Custom:%BCmm"
-#define UI_TEXT_COATING_THICKNESS_EN " %BCmm"
-#endif 
 #define UI_TEXT_LANGUAGE_EN "Language"
 
 #if NUM_EXTRUDER > 2 || MIXING_EXTRUDER != 0
@@ -736,7 +695,7 @@
 #define UI_TEXT_EMPTY_EN ""
 #define UI_TEXT_TEMP_SET_EN cTEMP "%ec/%Ec" cDEG
 #define UI_TEXT_CURRENT_TEMP_EN cTEMP "%ec" cDEG
-#if NUM_EXTRUDER > 2
+#define UI_TEXT_COATING_THICKNESS_EN " %BCmm"
 #define UI_TEXT_EXTR3_TEMP_EN "Temp. 4 :%e3/%E3" cDEG "C"
 #define UI_TEXT_EXTR4_TEMP_EN "Temp. 5 :%e4/%E4" cDEG "C"
 #define UI_TEXT_EXTR5_TEMP_EN "Temp. 6 :%e5/%E5" cDEG "C"
@@ -746,13 +705,11 @@
 #define UI_TEXT_EXTR3_SELECT_EN "%X3 Select extr. 4"
 #define UI_TEXT_EXTR4_SELECT_EN "%X4 Select extr. 5"
 #define UI_TEXT_EXTR5_SELECT_EN "%X5 Select extr. 6"
-#endif
-#if FEATURE_DITTO_PRINTING
 #define UI_TEXT_DITTO_0_EN "%D0 No copies"
 #define UI_TEXT_DITTO_1_EN "%D1 1 copy"
 #define UI_TEXT_DITTO_2_EN "%D2 2 copies"
 #define UI_TEXT_DITTO_3_EN "%D3 3 copies"
-#endif
+#define UI_TEXT_ZPROBE_HEIGHT_EN "Z-probe height:%zh"
 
 #define UI_TEXT_OFFSETS_EN "Set print offsets"
 #define UI_TEXT_X_OFFSET_EN "Set X offset:%T0mm"
@@ -761,61 +718,48 @@
 #define UI_TEXT_LAYER_EN "Layer %Pl/%PL"
 #define UI_TEXT_PROGRESS_EN "%Pp%%%"
 #define UI_TEXT_PRINTNAME_EN "%Pn"
-#define UI_TEXT_SETUP_EN "Setup"
 
-#if DISTORTION_CORRECTION
+#define UI_TEXT_SETUP_EN "Setup"
 #define UI_TEXT_MEASURE_DISTORTION_EN "Measure distortion"
 #define UI_TEXT_DISTORTION_CORR_EN "Distortion corr.:%De"
-#endif
 #define UI_TEXT_ACTION_FAN2SPEED_EN   "Fan 2 speed:%FS%%%"
 #define UI_TEXT_CANCEL_EN "Cancel"
 #define UI_TEXT_PLEASE_WAIT_EN "*** Please wait ***"
-
+#define UI_TEXT_CLEARBED1_EN "Make sure the heated"
+#define UI_TEXT_CLEARBED2_EN "bed is clear of any"
+#define UI_TEXT_CLEARBED3_EN "obstructions"
 #define UI_TEXT_NOTIFICATION_EN "Notification:"
 #define UI_TEXT_TEMPSENSOR_DEFECT_EN "Temp. sensor defect"
 #define UI_TEXT_HEATER_DECOUPLED_EN "Heater decoupled"
 #define UI_TEXT_SLIPPING_EN "Filament slipping"
-#define UI_TEXT_OK_EN "    >>> Ok <<<"
-
-#if FEATURE_AUTOLEVEL == 1
-#define UI_TEXT_CLEARBED1_EN "Make sure the heated"
-#define UI_TEXT_CLEARBED2_EN "bed is clear of any"
-#define UI_TEXT_CLEARBED3_EN "obstructions"
 #define UI_TEXT_LEVELING_ERROR_EN "Leveling error"
+#define UI_TEXT_OK_EN "    >>> Ok <<<"
 #define UI_TEXT_CALIBRATING_EN "Calibrating bed"
 #define UI_TEXT_CALIBRATION_ERROR_EN "Calibration Error"
 #define UI_TEXT_AUTOLEVEL_BED_EN "Autolevel bed"
-#endif
 #define UI_TEXT_HOMING_EN "Homing..."
 #define UI_TEXT_PREHEAT_TEMPS_EN "Preheat Temperatures"
 #define UI_TEXT_PREHEAT_E0_EN "Extr. 1: %p0" cDEG "C"
 #define UI_TEXT_PREHEAT_E1_EN "Extr. 2: %p1" cDEG "C"
-#if NUM_EXTRUDER > 2
 #define UI_TEXT_PREHEAT_E2_EN "Extr. 3: %p2" cDEG "C"
 #define UI_TEXT_PREHEAT_E3_EN "Extr. 4: %p3" cDEG "C"
 #define UI_TEXT_PREHEAT_E4_EN "Extr. 5: %p4" cDEG "C"
 #define UI_TEXT_PREHEAT_E5_EN "Extr. 6: %p5" cDEG "C"
-#endif
 #define UI_TEXT_PREHEAT_BED_EN "Bed    : %pb" cDEG "C"
+#define UI_TEXT_MEAS_ZP_HEIGHT_EN "Meas. Probe Height"
 #define UI_TEXT_CUR_TEMP_EN "Temp. %ec/%Ec" cDEG "C"
+#define UI_TEXT_REAL_Z_EN "Real Z Pos:%W0mm"
 #define UI_TEXT_CONTINUE_EN "Continue"
 #define UI_TEXT_CLOSE_EN "Close"
 #define UI_TEXT_EXTR_ZOFF_EN "Z-Offset:%Xz"
 #define UI_TEXT_MEASURING_EN "Measuring ..."
-#if FEATURE_Z_PROBE
-#define UI_TEXT_ZPROBE_HEIGHT_EN "Z-probe height:%zh"
-#define UI_TEXT_REAL_Z_EN "Real Z Pos:%W0mm"
 #define UI_TEXT_Z_PROBE_EN "Start Z-Probe"
-#define UI_TEXT_MEAS_ZP_HEIGHT_EN "Meas. Probe Height"
-#endif
 #define UI_TEXT_MAINPAGE6_1_C_EN "Xw:%x5   X:%x0"
 #define UI_TEXT_MAINPAGE6_2_C_EN "Yw:%x6   Y:%x1"
 #define UI_TEXT_MAINPAGE6_3_C_EN "Zw:%x7   Z:%x2"
 #define UI_TEXT_MAINPAGE6_4_L_EN "Mul: %om%%%    Las:%op W"
 #define UI_TEXT_MAINPAGE6_4_C_EN "Mul: %om%%%    Spi:%opRPM "
-#if EXTRUDER_JAM_CONTROL == 1
 #define UI_TEXT_JAMCONTROL_EN "%ej Jam Control"
-#endif
 
 // *************** German translation ****************
 
@@ -837,7 +781,7 @@
 #define UI_TEXT_EXTRUDER_DE         "Extruder"
 #define UI_TEXT_SD_CARD_DE          "SD Karte"
 #define UI_TEXT_DEBUGGING_DE        "Debugging"
-// #define UI_TEXT_HOME_DELTA_DE       "Home Delta"
+#define UI_TEXT_HOME_DELTA_DE       "Home Delta"
 #define UI_TEXT_HOME_ALL_DE         "Home Alle"
 #define UI_TEXT_HOME_X_DE           "Home X"
 #define UI_TEXT_HOME_Y_DE           "Home Y"
@@ -869,11 +813,11 @@
 #define UI_TEXT_PRINT_X_DE          "Drucken X:%ax"
 #define UI_TEXT_PRINT_Y_DE          "Drucken Y:%ay"
 #define UI_TEXT_PRINT_Z_DE          "Drucken Z:%az"
-// #define UI_TEXT_PRINT_Z_DELTA_DE    "Drucken:%az"
+#define UI_TEXT_PRINT_Z_DELTA_DE    "Drucken:%az"
 #define UI_TEXT_MOVE_X_DE           "Bewege X:%aX"
 #define UI_TEXT_MOVE_Y_DE           "Bewege Y:%aY"
 #define UI_TEXT_MOVE_Z_DE           "Bewege Z:%aZ"
-// #define UI_TEXT_MOVE_Z_DELTA_DE     "Bewege:%aZ"
+#define UI_TEXT_MOVE_Z_DELTA_DE     "Bewege:%aZ"
 #define UI_TEXT_JERK_DE             "Ruck     :%aj"
 #define UI_TEXT_ZJERK_DE            "Z-Ruck   :%aJ"
 #define UI_TEXT_ACCELERATION_DE     "Beschleunigung"
@@ -902,11 +846,11 @@
 #define UI_TEXT_FEED_MAX_X_DE       "Max X:%fx"
 #define UI_TEXT_FEED_MAX_Y_DE       "Max Y:%fy"
 #define UI_TEXT_FEED_MAX_Z_DE       "Max Z:%fz"
-// #define UI_TEXT_FEED_MAX_Z_DELTA_DE "Max:%fz"
+#define UI_TEXT_FEED_MAX_Z_DELTA_DE "Max:%fz"
 #define UI_TEXT_FEED_HOME_X_DE      "Home X:%fX"
 #define UI_TEXT_FEED_HOME_Y_DE      "Home Y:%fY"
 #define UI_TEXT_FEED_HOME_Z_DE      "Home Z:%fZ"
-// #define UI_TEXT_FEED_HOME_Z_DELTA_DE "Home:%fZ"
+#define UI_TEXT_FEED_HOME_Z_DELTA_DE "Home:%fZ"
 #define UI_TEXT_ACTION_XPOSITION4A_DE "X:%x0 mm %dx%dX"
 #define UI_TEXT_ACTION_XPOSITION4B_DE "Min Endstopp:%sx"
 #define UI_TEXT_ACTION_XPOSITION4C_DE "Max Endstopp:%sX"
@@ -965,12 +909,8 @@
 #define UI_TEXT_EXTR_MAX_FEED_DE     "Max FR:%XF"
 #define UI_TEXT_EXTR_ACCEL_DE        "Beschl.:%XA"
 #define UI_TEXT_EXTR_WATCH_DE        "Stab.Zeit:%Xw"
-#if USE_ADVANCE == 1
 #define UI_TEXT_EXTR_ADVANCE_L_DE    "Advance lin:%Xl"
-#endif
-#if ENABLE_QUADRATIC_ADVANCE == 1
 #define UI_TEXT_EXTR_ADVANCE_K_DE    "Advance quad:%Xa"
-#endif
 #define UI_TEXT_EXTR_MANAGER_DE      "Regler:%Xh"
 #define UI_TEXT_EXTR_PGAIN_DE        "PID P:%Xp"
 #define UI_TEXT_EXTR_DEADTIME_DE     "Totzeit:%Xp"
@@ -1010,7 +950,7 @@
 #define UI_TEXT_SET_P2_DE       "Setze P2"
 #define UI_TEXT_SET_P3_DE       "Setze P3"
 #define UI_TEXT_CALCULATE_LEVELING_DE "Berechne Leveling"
-// #define UI_TEXT_LEVEL_DE        "Level delta"
+#define UI_TEXT_LEVEL_DE        "Level delta"
 #define UI_TEXT_EXTR_WAIT_RETRACT_TEMP_DE  "Wartetemp.%XT" cDEG "C"
 #define UI_TEXT_EXTR_WAIT_RETRACT_UNITS_DE "R" STR_uuml "ckz. um:%XU mm"
 #define UI_TEXT_SD_REMOVED_DE       "SD Karte entfernt"
@@ -1178,7 +1118,7 @@
 #define UI_TEXT_EXTRUDER_NL         "Extruder"
 #define UI_TEXT_SD_CARD_NL          "Print"
 #define UI_TEXT_DEBUGGING_NL        "Debugging"
-// #define UI_TEXT_HOME_DELTA_NL       "Home delta"
+#define UI_TEXT_HOME_DELTA_NL       "Home delta"
 #define UI_TEXT_HOME_ALL_NL         "Home alles"
 #define UI_TEXT_HOME_X_NL           "Home X"
 #define UI_TEXT_HOME_Y_NL           "Home Y"
@@ -1212,11 +1152,11 @@
 #define UI_TEXT_PRINT_X_NL          "Print X:%ax"
 #define UI_TEXT_PRINT_Y_NL          "Print Y:%ay"
 #define UI_TEXT_PRINT_Z_NL          "Print Z:%az"
-// #define UI_TEXT_PRINT_Z_DELTA_NL    "Print:%az"
+#define UI_TEXT_PRINT_Z_DELTA_NL    "Print:%az"
 #define UI_TEXT_MOVE_X_NL           "Beweeg X:%aX"
 #define UI_TEXT_MOVE_Y_NL           "Beweeg Y:%aY"
 #define UI_TEXT_MOVE_Z_NL           "Beweeg Z:%aZ"
-// #define UI_TEXT_MOVE_Z_DELTA_NL     "Beweeg:%aZ"
+#define UI_TEXT_MOVE_Z_DELTA_NL     "Beweeg:%aZ"
 #define UI_TEXT_JERK_NL             "Ruk:%aj"
 #define UI_TEXT_ZJERK_NL            "Z-Ruk:%aJ"
 #define UI_TEXT_ACCELERATION_NL     "Acceleratie"
@@ -1350,7 +1290,7 @@
 #define UI_TEXT_SET_P2_NL            "Zet P2"
 #define UI_TEXT_SET_P3_NL            "Zet P3"
 #define UI_TEXT_CALCULATE_LEVELING_NL "Bereken leveling"
-// #define UI_TEXT_LEVEL_NL             "Level delta"
+#define UI_TEXT_LEVEL_NL             "Level delta"
 #define UI_TEXT_EXTR_WAIT_RETRACT_TEMP_NL "Wacht temp. %XT" cDEG "C"
 #define UI_TEXT_EXTR_WAIT_RETRACT_UNITS_NL "Wacht retr.:%XU mm"
 #define UI_TEXT_SD_REMOVED_NL       "SD-kaart verwijderd"
@@ -1516,7 +1456,7 @@
 #define UI_TEXT_EXTRUDER_PT         "Extrusor"
 #define UI_TEXT_SD_CARD_PT          "Cartao SD"
 #define UI_TEXT_DEBUGGING_PT        "Depuracao"
-// #define UI_TEXT_HOME_DELTA_PT       "Home delta"
+#define UI_TEXT_HOME_DELTA_PT       "Home delta"
 #define UI_TEXT_HOME_ALL_PT         "Home todos"
 #define UI_TEXT_HOME_X_PT           "Home X"
 #define UI_TEXT_HOME_Y_PT           "Home Y"
@@ -1548,11 +1488,11 @@
 #define UI_TEXT_PRINT_X_PT          "Imprimir X:%ax"
 #define UI_TEXT_PRINT_Y_PT          "Imprimir Y:%ay"
 #define UI_TEXT_PRINT_Z_PT          "Imprimir Z:%az"
-// #define UI_TEXT_PRINT_Z_DELTA_PT    "Imprimir:%az"
+#define UI_TEXT_PRINT_Z_DELTA_PT    "Imprimir:%az"
 #define UI_TEXT_MOVE_X_PT           "Mover X:%aX"
 #define UI_TEXT_MOVE_Y_PT           "Mover Y:%aY"
 #define UI_TEXT_MOVE_Z_PT           "Mover Z:%aZ"
-// #define UI_TEXT_MOVE_Z_DELTA_PT     "Mover:%aZ"
+#define UI_TEXT_MOVE_Z_DELTA_PT     "Mover:%aZ"
 #define UI_TEXT_JERK_PT             "Jerk:%aj"
 #define UI_TEXT_ZJERK_PT            "Z-Jerk:%aJ"
 #define UI_TEXT_ACCELERATION_PT     "Aceleracao"
@@ -1581,11 +1521,11 @@
 #define UI_TEXT_FEED_MAX_X_PT       "Max X:%fx"
 #define UI_TEXT_FEED_MAX_Y_PT       "Max Y:%fy"
 #define UI_TEXT_FEED_MAX_Z_PT       "Max Z:%fz"
-// #define UI_TEXT_FEED_MAX_Z_DELTA_PT "Max:%fz"
+#define UI_TEXT_FEED_MAX_Z_DELTA_PT "Max:%fz"
 #define UI_TEXT_FEED_HOME_X_PT      "Home X:%fX"
 #define UI_TEXT_FEED_HOME_Y_PT      "Home Y:%fY"
 #define UI_TEXT_FEED_HOME_Z_PT      "Home Z:%fZ"
-// #define UI_TEXT_FEED_HOME_Z_DELTA_PT "Home:%fZ"
+#define UI_TEXT_FEED_HOME_Z_DELTA_PT "Home:%fZ"
 #define UI_TEXT_ACTION_XPOSITION4A_PT "X:%x0 mm %dx%dX"
 #define UI_TEXT_ACTION_XPOSITION4B_PT "Min endstop:%sx"
 #define UI_TEXT_ACTION_XPOSITION4C_PT "Max endstop:%sX"
@@ -1685,7 +1625,7 @@
 #define UI_TEXT_SET_P2_PT            "Set P2"
 #define UI_TEXT_SET_P3_PT            "Set P3"
 #define UI_TEXT_CALCULATE_LEVELING_PT "Calcule nivelamento"
-// #define UI_TEXT_LEVEL_PT             "Nivel delta"
+#define UI_TEXT_LEVEL_PT             "Nivel delta"
 #define UI_TEXT_EXTR_WAIT_RETRACT_TEMP_PT  "Aguardar Temp.%XT" cDEG "C"
 #define UI_TEXT_EXTR_WAIT_RETRACT_UNITS_PT "Aguardar Unidades:%XUmm"
 #define UI_TEXT_SD_REMOVED_PT       "Cartao SD removido"
